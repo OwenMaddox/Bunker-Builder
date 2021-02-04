@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royal Games</title>
+    <link
+    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
+   
+   
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex mb-4">
+      <div class="flex-1 h-12">
+        <div class="flex-1 h-12 txa"><img src="royalGames.png" /></div>
+      </div>
+      <div class="flex-1 h-12">
+        <h1 class="titlebig txac bub">Bunker</h1>
+      </div>
+      <div class="flex-1 titlebig txac h-12 pop">Population</div>
+      <div class="flex-1 titlebig txac h-12 wood">Wood</div>
+      <div class="flex-1 titlebig txac h-12 steel">Steel</div>
+    </div>
+
+    <div class="flex mb-4">
+      <div class="flex-1 h-12"></div>
+      <div class="flex-1 titlebig txac h-48 bub">Builder</div>
+      <div class="flex-1 titlebig txac h-12 pop">
+        <div id="population">0</div>
+      </div>
+      <div class="flex-1 titlebig txac h-12 wood">
+        <div id="Wood">0</div>
+      </div>
+      <div class="flex-1 titlebig txac h-12 steel">
+        <div id="Steel">0</div>
+      </div>
+    </div>
+
+    <!--First Layer tycoon-->
+
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Starter.png" />
+      </div>
+      <div class="flex-1 h-12">
+        <button onclick="makeWood()" class="button">Make Wood</button>
+      </div>
+
+      <div class="flex-1 h-12">
+        <button onclick="makeSteel()" class="button">Make Steel</button>
+      </div>
+    </div>
+
+    <!--Level 1-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 1.png" id="level1" />
+      </div>
+      <div class="flex-1 description h-12">
+        Kitchen: 100 Wood, and 25 Steel to purchase. Earns 4 Wood and 1 Steel
+        every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button1" class="purchase" onclick="Level1()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <!--Level 2-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 2.png" id="level2" />
+      </div>
+      <div class="flex-1 description h-12">
+        Bed Room: 7 People, 300 Wood, and 100 Steel to purchase. Earns 6 Wood
+        and 2 Steel every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button2" class="purchase" onclick="Level2()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <!--Level 3-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 3.png" id="level3" />
+      </div>
+      <div class="flex-1 description h-12">
+        Bed Room: 25 people 500 Wood, and 200 Steel to purchase. Earns 12 Wood
+        and 6 Steel every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button3" class="purchase" onclick="Level3()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <!--Level 4-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 4.png" id="level4" />
+      </div>
+      <div class="flex-1 description h-12">
+        Saw Mill: 50 people 1200 Wood, and 400 Steel to purchase. Earns 15 Wood
+        and 0 Steel every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button4" class="purchase" onclick="Level4()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <!--Level 5-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 5.png" id="level5" />
+      </div>
+      <div class="flex-1 description h-12">
+        Steel Mill: 75 people 1000 Wood, and 1000 Steel to purchase. Earns 0
+        Wood and 15 Steel every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button5" class="purchase" onclick="Level5()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <!--Level 6-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 6.png" id="level6" />
+      </div>
+      <div class="flex-1 description h-12">
+        Living Room: 100 people 1500 Wood, and 800 Steel to purchase. Earns 5
+        Wood and 1 Steel every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button6" class="purchase" onclick="Level6()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <!--Level 7-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 7.png" id="level7" />
+      </div>
+      <div class="flex-1 description h-12">
+        Bed Room: 150 people 2000 Wood, and 1200 Steel to purchase. Earns 10
+        Wood and 5 Steel every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button7" class="purchase" onclick="Level7()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <!--Level 8-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 8.png" id="level8" />
+      </div>
+      <div class="flex-1 description h-12">
+        Green House: 200 people 3000 Wood, and 2000 Steel to purchase. Earns 30
+        Wood and 10 Steel every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button8" class="purchase" onclick="Level8()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <!--Level 9-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 9.png" id="level9" />
+      </div>
+      <div class="flex-1 description h-12">
+        Distillery: 600 people 2500 Wood, and 3000 Steel to purchase. Earns 35
+        Wood and 50 Steel every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button9" class="purchase" onclick="Level9()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <!--Level 10-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 10.png" id="level10" />
+      </div>
+      <div class="flex-1 description h-12">
+        Tree Farm: 800 people 2800 Wood, and 1500 Steel to purchase. Earns 80
+        Wood and 5 Steel every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button10" class="purchase" onclick="Level10()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <!--Level 11-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 11.png" id="level11" />
+      </div>
+      <div class="flex-1 description h-12">
+        Mine: 1200 people 2000 Wood, and 3000 Steel to purchase. Earns 5 Wood
+        and 100 Steel every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button11" class="purchase" onclick="Level11()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <!--Level 12-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 12.png" id="level12" />
+      </div>
+      <div class="flex-1 description h-12">
+        Bed Room: 1500 people 2500 Wood, and 2500 Steel to purchase. Earns 20
+        Wood and 10 Steel every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button12" class="purchase" onclick="Level12()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <!--Level 13-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 13.png" id="level13" />
+      </div>
+      <div class="flex-1 description h-12">
+        Jewlery Shop: 2000 people 5500 Wood, and 5500 Steel to purchase. Earns
+        120 Wood and 120 Steel every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button13" class="purchase" onclick="Level13()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <!--Level 14-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 14.png" id="level14" />
+      </div>
+      <div class="flex-1 description h-12">
+        Pool: 4000 people 12000 Wood, and 10000 Steel to purchase. Earns 350 Wood
+        and 350 Steel every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button14" class="purchase" onclick="Level14()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <!--Level 15-->
+    <div class="flex">
+      <div class="flex-1">
+        <img class="w-64 mr" src="Level 15.png" id="level15" />
+      </div>
+      <div class="flex-1 description h-12">
+        Movie Theater: 6000 people 25000 Wood, and 12000 Steel to purchase. Earns
+        500 Wood and 500 Steel every 5 seconds.
+      </div>
+
+      <div class="flex-1 description h-12">
+        <button id="button15" class="purchase" onclick="Level15()">
+          Purchase
+        </button>
+      </div>
+    </div>
+
+    <style>
+      .txa {
+        width: 150px;
+      }
+      .txar {
+        text-align: right;
+      }
+      .txac {
+        text-align: center;
+      }
+      .titlebig {
+        font-size: 40px;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .button {
+        font-size: 35px;
+        color: black;
+        background-color: burlywood;
+        border-color: black;
+        border-width: 5px;
+        border-radius: 10px;
+        border-style: ridge;
+        height: 60px;
+        font-weight: 600;
+      } 
+      .button:hover {
+        background-color: rgb(216, 152, 70);
+      }
+      .ml {
+        margin-left: 100px;
+      }
+      .steel {
+        color: grey;
+        font-weight: 600;
+      }
+      .wood {
+        color: burlywood;
+        font-weight: 600;
+      }
+      .pop {
+        color: chocolate;
+        font-weight: 600;
+      }
+      .bub {
+        color: purple;
+        font-weight: 600;
+      }
+      .description {
+        font-weight: 700;
+        color: black;
+      }
+      .purchase {
+        font-size: 25px;
+        font-weight: 600;
+        color: black;
+        background-color: forestgreen;
+        border-color: black;
+        border-width: 5px;
+        border-radius: 10px;
+        border-style: ridge;
+        height: 45px;
+        width: 250px;
+        text-align: center;
+      }
+      .purchase:hover{
+        background-color: rgb(6, 177, 6);
+      }
+      .rebirth {
+        font-size: 50px;
+      }
+    </style>
+
+    <div class="flex mb-4">
+      <div class="flex-1 h-48"></div>
+      <div class="flex-1 h-48"></div>
+      <div class="flex-1 h-48"></div>
+    </div>
+
+    <style>
+      .pricing{
+        border-color: black;
+        border-width: 3px;
+        width: 250px;
+        background-color: lavender;
+        height: 500px;
+        border-radius: 5px;
+        font-size: 18px;
+        margin-left: 10px;
+       
+      }
+      .overline {
+        text-decoration:overline;
+      }
+      .title {
+        font-size: 55px;
+        vertical-align: top;
+      }
+      .bronze {
+          background-color: goldenrod;
+       
+      }.bronze:hover{
+        background-color: rgb(189, 143, 27);
+      }
+      .silver {
+          background-color: silver;
+      }.silver:hover {
+        background-color: rgb(230, 230, 230);
+      }
+      .gold {
+          background-color: gold;
+      }.gold:hover{
+        background-color: rgb(223, 189, 0);
+      }
+      .diamond {
+          background-color: turquoise;
+      }.diamond:hover {
+        background-color: lightseagreen;
+      }
+      .platinum{
+          background-color: whitesmoke;
+      }.platinum:hover{
+        background-color: rgb(189, 189, 189);
+      }
+      .spacing {
+          margin-top: 40px;
+      }.omega {
+        text-align: center;
+        background-color: black;
+        color: red;
+        border-color: red;
+        border-width: 5px;
+        border-radius: 5px;
+        margin-left: 295px;
+        margin-right: 305px;
+      }.omega:hover{
+        background-color: rgb(47, 47, 47);
+      }
+      .omtx {
+        font-size: 20px;
+      }
+    </style>
+
+    <div class="flex mb-4">
+      <div class="flex-1 h-48">
+        <button id="bronze" class="pricing bronze" onclick="bronze()">
+          <div class="title">Bronze</div>
+          <div class="spacing">
+                <div class="overline">• Doubles all clicks</div>
+                <div class="">• Costs 1500 Wood</div>
+                <div class="">• Costs 1500 Steel</div>
+                <div class="overline">• Invest in a Bronze</div>
+                <div>clicker to speed</div>
+                <div>along the production </div>
+                <div>of your materials.</div>
+        </div>
+         
+        </button>
+      </div>
+      <div class="flex-1 h-48">
+            <button id="silver" class="pricing silver" onclick="silver()">
+                <div class="title">Silver</div>
+                <div class="spacing">
+                        <div class="overline">• Triples all clicks</div>
+                        <div class="">• Costs 2500 Wood</div>
+                        <div class="">• Costs 2500 Steel</div>
+                        <div class="overline">• Invest in a Silver</div>
+                        <div>clicker to speed</div>
+                        <div>along the production </div>
+                        <div>of your materials.</div>
+                </div>
+                   
+            </button>
+      </div>
+      <div class="flex-1 h-48">
+            <button id="gold" class="pricing gold" onclick="gold()">
+                    <div class="title">Gold</div>
+                    <div class="spacing">
+                            <div class="overline">• Multiplys all clicks by 5</div>
+                            <div class="">• Costs 5000 Wood</div>
+                            <div class="">• Costs 5000 Steel</div>
+                            <div class="overline">• Invest in a Gold</div>
+                            <div>clicker to speed</div>
+                            <div>along the production </div>
+                            <div>of your materials.</div>
+                    </div>
+                       
+                </button>
+      </div>
+      <div class="flex-1 h-48">
+            <button id="diamond" class="pricing diamond" onclick="diamond()">
+                    <div class="title">Diamond</div>
+                    <div class="spacing">
+                            <div class="overline">• Multiplys all clicks by 8</div>
+                            <div class="">• Costs 15000 Wood</div>
+                            <div class="">• Costs 15000 Steel</div>
+                            <div class="overline">• Invest in a Diamond</div>
+                            <div>clicker to speed</div>
+                            <div>along the production </div>
+                            <div>of your materials.</div>
+                    </div>
+                       
+                </button>
+      </div>
+      <div class="flex-1 h-48">
+            <button id="platinum" class="pricing platinum" onclick="platinum()">
+                    <div class="title">Platinum</div>
+                    <div class="spacing">
+                            <div class="overline">• Multiplys all clicks by 10</div>
+                            <div class="">• Costs 25000 Wood</div>
+                            <div class="">• Costs 25000 Steel</div>
+                            <div class="overline">• Invest in a Platinum</div>
+                            <div>clicker to speed</div>
+                            <div>along the production </div>
+                            <div>of your materials.</div>
+                    </div>
+                       
+                </button>
+      </div>
+    </div>
+    <div class="flex mb-4">
+      <div class="flex-1 h-64"></div>
+</div>
+<div class="flex mb-4">
+  <div class="flex-1 h-16"></div>
+</div>
+
+    <div class="flex mb-4 omega omtx">
+      <div class="flex-1 h-64">
+        <button id="omega" onclick="omega()">
+          <div class="title">OMEGA</div>
+            <div class="spacing">
+              <div class="overline">• Multiplys all clicks by 20</div>
+              <div>• Costs 50000 Wood</div>
+              <div>• Costs 50000 Steel</div>
+              <div class="overline">Invest in OMEGA clicks to speed along the production of your materials</div>
+            </div>
+        </button>
+      </div>
+    </div>
+
+
+
+
+    <div class="flex mb-4">
+            <div class="flex-1 h-16">
+              <div ></div>
+            </div>
+            <div class="flex-1 h-16"></div>
+            <div class="flex-1 h-16"></div>
+          </div>
+
+    <div class="flex mb-4">
+            <div class="flex-1 h-64">
+              <div ></div>
+            </div>
+            <div class="flex-1 h-64"></div>
+            <div class="flex-1 h-64"></div>
+          </div>
+
+    <div class="flex mb-4">
+      <div class="flex-1 h-16">
+        <div class="pop rebirth txac">Multiplyer</div>
+      </div>
+      <div class="flex-1 h-16"></div>
+      <div class="flex-1 h-16"></div>
+    </div>
+
+    <div class="flex mb-4">
+      <div class="flex-1 h-48">
+        <div id="rebirth" class="pop rebirth txac">1</div>
+      </div>
+      <div class="flex-1 h-48">
+        <button class="button text-center ml" onclick="Reset()">
+          Reset Progress
+        </button>
+      </div>
+      <div class="flex-1 h-48">
+        <button class="button text-center ml" onclick="Rebirth()">
+          Multiply
+        </button>
+      </div>
+    </div>
+
+      <div class="flex mb-4">
+        <div class="flex-1 h-48 " onclick="timer()">
+         
+        </div> 
+        <div class="flex-1 h-48 pop rebirth txac" id="timer">0</div>
+        <div class="flex-1 h-48"></div>
+      </div>
+
+
+
+
+    <script src="Builder.js" src="omegaclicks.js"></script>
+  </body>
+</html>
