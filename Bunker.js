@@ -535,7 +535,7 @@ function Level4() {
         }, 35000);
         setInterval(function () {
           if (localStorage.wood) {
-            localStorage.wood = Number(localStorage.wood) + 15 * rebirths;
+            localStorage.wood = Number(localStorage.wood) + 100 * rebirths;
           } else {
             localStorage.wood = 1;
           }
@@ -590,7 +590,7 @@ function Level5() {
         }, 35000);
         setInterval(function () {
           if (localStorage.steel) {
-            localStorage.steel = Number(localStorage.steel) + 15 * rebirths;
+            localStorage.steel = Number(localStorage.steel) + 100 * rebirths;
           } else {
             localStorage.steel = 0.25;
           }
@@ -958,7 +958,7 @@ function Level11() {
         setInterval(function () {
           if (localStorage.population) {
             localStorage.population =
-              Number(localStorage.population) + 3 * rebirths;
+              Number(localStorage.population) + 60 * rebirths;
           } else {
             localStorage.population = 1;
           }
@@ -1084,7 +1084,7 @@ function Level13() {
         setInterval(function () {
           if (localStorage.population) {
             localStorage.population =
-              Number(localStorage.population) + 30 * rebirths;
+              Number(localStorage.population) + 100 * rebirths;
           } else {
             localStorage.population = 1;
           }
@@ -1147,7 +1147,7 @@ function Level14() {
         setInterval(function () {
           if (localStorage.population) {
             localStorage.population =
-              Number(localStorage.population) + 45 * rebirths;
+              Number(localStorage.population) + 100 * rebirths;
           } else {
             localStorage.population = 1;
           }
