@@ -56,10 +56,13 @@ function Rebirth() {
         localStorage.rebirths = Number(localStorage.rebirths) + 1;
 
         localStorage.population = 0;
+        localStorage.population = Number(localStorage.population) = 0;
 
         localStorage.wood = 0;
+        localStorage.wood = Number(localStorage.wood) = 0;
 
         localStorage.steel = 0;
+        localStorage.steel = Number(localStorage.steel) =0;
 
         localStorage.clicks = 1;
 
